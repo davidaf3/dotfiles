@@ -16,7 +16,6 @@ in
   imports = [
     ./options.nix
     ./niri.nix
-    ./waybar.nix
     ./ironbar.nix
     ./matugen.nix
   ];
@@ -43,7 +42,6 @@ in
 
   home.activation = {
     reloadApps = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      pgrep waybar > /dev/null && $DRY_RUN_CMD pkill -SIGUSR2 waybar || true
       $DRY_RUN_CMD ${config.programs.ironbar.package}/bin/ironbar reload || true
       $DRY_RUN_CMD systemctl reload --user app-com.mitchellh.ghostty.service || true
     '';

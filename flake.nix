@@ -49,10 +49,6 @@
       homeConfigurations."david" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        extraSpecialArgs = {
-          cpuCores = 16;
-        };
-
         modules = [
           ./home.nix
           niri.homeModules.config
