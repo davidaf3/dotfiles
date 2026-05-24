@@ -389,6 +389,14 @@
         background-color: mix(#${config.colors.secondary}, #${config.colors.on_secondary}, 0.08);
       }
 
+      .popup-volume .sink-input-box.vertical > :last-child {
+        margin-bottom: 5px;
+      }
+
+      .popup-volume .source-output-box.vertical > :first-child {
+        margin-top: -5px;
+      }
+
       .popup-volume .app-box .title {
         padding: 8px;
       }
