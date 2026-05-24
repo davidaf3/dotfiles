@@ -47,6 +47,11 @@ in
     '';
   };
 
+  programs.bash = {
+    enable = true;
+    package = null;
+  };
+
   programs.fish = {
     enable = true;
     interactiveShellInit = "set -g fish_greeting";
@@ -74,6 +79,7 @@ in
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
+    enableBashIntegration = true;
     settings =
       let
         programmingLangIcons = {
