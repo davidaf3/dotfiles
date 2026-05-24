@@ -34,8 +34,6 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [ "nvidia-x11" ];
-        config.nvidia.acceptLicense = true;
       };
     in
     {
