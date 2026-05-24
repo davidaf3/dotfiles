@@ -46,6 +46,22 @@
             "loopback"
             "dummy"
           ];
+          profiles = {
+            wired_disconnected = {
+              when = {
+                type = "wired";
+                state = "disconnected";
+              };
+              icon = "icon:network-wired-disconnected-symbolic";
+            };
+            wired_connected = {
+              when = {
+                type = "wired";
+                state = "connected";
+              };
+              icon = "icon:network-wired-connected-symbolic";
+            };
+          };
         }
         {
           type = "volume";
