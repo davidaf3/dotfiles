@@ -88,6 +88,13 @@
             "-d"
           ];
         }
+        {
+          command = [
+            "wl-clip-persist"
+            "--clipboard"
+            "regular"
+          ];
+        }
         { command = [ "ironbar" ]; }
         { command = [ "quickshell" ]; }
         { sh = "swaybg -i ${config.xdg.dataHome}/wallpaper.jpg"; }
