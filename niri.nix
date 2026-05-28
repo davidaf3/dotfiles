@@ -82,6 +82,7 @@
       };
 
       spawn-at-startup = [
+        { command = [ "/usr/lib/soteria-polkit/soteria" ]; }
         {
           command = [
             "fcitx5"
