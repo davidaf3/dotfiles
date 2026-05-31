@@ -116,6 +116,10 @@
           matches = [
             {
               app-id = "^steam_app_.*$";
+
+            }
+            {
+              app-id = "cs2";
             }
           ];
           variable-refresh-rate = true;
