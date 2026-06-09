@@ -36,7 +36,7 @@ fn vpn_menu(vpn_names: Vec<String>) -> Result<()> {
     for vpn in vpns {
         let vpn = vpn?;
         let label = format!(
-            "{} {}",
+            "{}    {}",
             if vpn.is_active() { "󰄬" } else { " " },
             vpn.get_name()
         );
