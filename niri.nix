@@ -52,6 +52,7 @@
           proportion = 0.5;
         };
         focus-ring = {
+          off = [ ];
           width = 1;
           active-color = "#${config.colors.primary}";
           inactive-color = "#${config.colors.outline}";
