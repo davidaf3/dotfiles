@@ -11,10 +11,6 @@
       url = "github:JakeStanger/ironbar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     matugen = {
       url = "github:InioX/matugen";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +22,6 @@
       nixpkgs,
       home-manager,
       ironbar,
-      niri,
       matugen,
       ...
     }:
@@ -49,7 +44,6 @@
 
         modules = [
           ./home.nix
-          niri.homeModules.config
           ironbar.homeManagerModules.default
           matugen.nixosModules.default
         ];
